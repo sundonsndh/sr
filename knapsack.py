@@ -54,7 +54,7 @@ def evolve_population(pop):
     while len(children) < desired_length :
         male = pop[random.randint(0,len(parents)-1)]
         female = pop[random.randint(0,len(parents)-1)]        
-        half = len(male)/2
+        half = int(len(male)/2)
         child = male[:half] + female[half:] # from start to half from father, from half to end from mother
         if mutation_chance > random.random():
             mutate(child)
